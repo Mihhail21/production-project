@@ -34,4 +34,3 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     );
 };
 
-// className={classNames(cls.AppLink, {}, [className, cls[theme]])}
