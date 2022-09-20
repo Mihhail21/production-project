@@ -1,11 +1,8 @@
-import { Suspense, useContext, useState } from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from './providers/ThemeProvider';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
 import { AppRouter } from './providers/router';
+import { NavBar } from 'widgets';
 
 
 function App() {
@@ -14,10 +11,9 @@ function App() {
  
   return (
     <div className={classNames('app', {}, [theme])}>
-          <button onClick={toggleTheme}>toggle</button>
-          <Link to={'/'}> Главная</Link>
-          <Link to={'/about'}> О сайте</Link>
+          <NavBar/>
          <AppRouter/>
+          <button onClick={toggleTheme}>toggle</button>
     </div>
   )
 }
